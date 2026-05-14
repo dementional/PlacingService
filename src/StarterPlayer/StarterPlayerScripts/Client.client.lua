@@ -39,7 +39,7 @@ template.Parent = nil
 for _, object: Instance in shared.Assets:GetChildren() do
 	assert(
 		object:IsA("BasePart") or object:IsA("Model"),
-		`[{script.Name}]: {object} is not a valid object`
+		`{object} is not a valid object`
 	)
 	
 	local newButton: TextButton = template:Clone()
