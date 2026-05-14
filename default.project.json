@@ -20,6 +20,11 @@
         "$path": "src/StarterPlayer/StarterPlayerScripts"
       },
       "$ignoreUnknownInstances": true
+    },
+    "TestService": {
+      "$className": "TestService",
+      "$ignoreUnknownInstances": true,
+      "$path": "src/TestService"
     }
   }
 }
