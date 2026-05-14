@@ -6,8 +6,6 @@ A client-side module for Roblox that handles object previewing, grid snapping, r
 
 ---
 
----
-
 ## Quick Start
 
 ```lua
