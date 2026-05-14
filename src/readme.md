@@ -31,17 +31,17 @@ PlacingService.Rotate(Vector3.yAxis)
 ### `PlacingService.SetPreview(instance: BasePart | Model)`
 Starts a live preview bound to `RenderStep`. Automatically cancels any existing preview.
 
-### `PlacingService.Cancel()`
-Cancels and destroys the current preview, resetting all internal state.
+### `PlacingService.GetPreview(): Instance?`
+Returns the current preview instance, or `nil` if none is active.
 
 ### `PlacingService.Rotate(axis: Vector3)`
 Rotates the preview by `RotationUnit` degrees around the given axis.
 
-### `PlacingService.GetPreview(): Instance?`
-Returns the current preview instance, or `nil` if none is active.
-
 ### `PlacingService.GetTargetCF(): CFrame?`
 Returns the snapped `CFrame` the preview would be placed at based on the current mouse position.
+
+### `PlacingService.Cancel()`
+Cancels and destroys the current preview, resetting all internal state.
 
 ---
 
