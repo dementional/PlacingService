@@ -14,11 +14,17 @@ events.Remotes.Place.OnServerEvent:Connect(function(player: Player, arguments: {
 	
 	local object: Instance? = shared.Assets:FindFirstChild(objectName)
 	assert(object, `{objectName} couldn't not found in {shared.Assets}`)
-	
-	local hasValidPlacement: boolean = Validation.HasValidPlacement(object)
-	assert(hasValidPlacement, `{objectName} has invalid placement`)
 
 	local newObject: Instance = object:Clone()
 	newObject:PivotTo(CF)
+	
+	local hasValidPlacement: boolean = Validation.HasValidPlacement(object)
+	if not hasValidPlacement then
+		newObject:Destroy()
+		error(`{objectName} has invalid placement`)
+		
+		return
+	end
+	
 	newObject.Parent = workspace.Objects
 end)
