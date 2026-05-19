@@ -18,7 +18,7 @@ events.Remotes.Place.OnServerEvent:Connect(function(player: Player, arguments: {
 	local newObject: Instance = object:Clone()
 	newObject:PivotTo(CF)
 	
-	local hasValidPlacement: boolean = Validation.HasValidPlacement(object)
+	local hasValidPlacement: boolean = Validation.HasValidPlacement(newObject)
 	if not hasValidPlacement then
 		newObject:Destroy()
 		error(`{objectName} has invalid placement`)
